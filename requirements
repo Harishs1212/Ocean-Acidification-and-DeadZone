@@ -1,0 +1,8 @@
+Flask
+joblib
+numpy
+pandas
+seaborn
+matplotlib
+scikit-learn
+gunicorn  # Required for deployment (optional)
