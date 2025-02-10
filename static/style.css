@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+/* Background Images with Gradient Fallback */
+.index-bg {
+    background: url("../static/images/Ocean.jpg") no-repeat center center fixed, linear-gradient(to right, #005aa7, #fffde4);
+    background-size: cover;
+}
+
+.upload-bg {
+    background: url("../static/images/Result.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh; /* Force background to fill screen */
+}
+
+.result-bg {
+    background: url("../static/images/Home.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* Form Container */
+.container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+/* Form Title */
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Input Box */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Label Styling */
+.form-group label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Input Field Styling */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    width: 48%;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #007BFF;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+/* Image Styling */
+.page-image {
+    width: 80%;
+    border-radius: 12px;
+    margin-top: 20px;
+}

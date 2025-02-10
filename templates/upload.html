@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Ocean Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="upload-bg">
+
+
+    <div class="container">
+        <h2>Enter Ocean Data for Prediction</h2>
+
+        <form action="/upload" method="POST">
+            <div class="form-group">
+                <label for="Calcite">Calcite (mg/L)</label>
+                <input type="text" name="Calcite" placeholder="e.g., 0.35" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Carbonate_insitu_calculated">Carbonate (mg/L)</label>
+                <input type="text" name="Carbonate_insitu_calculated" placeholder="e.g., 0.25" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Aragonite">Aragonite</label>
+                <input type="text" name="Aragonite" placeholder="e.g., 3.5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Carbonate_measured">Carbonate Measured (mg/L)</label>
+                <input type="text" name="Carbonate_measured" placeholder="e.g., 0.30" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Carbonate_insitu_measured">In-Situ Carbonate (mg/L)</label>
+                <input type="text" name="Carbonate_insitu_measured" placeholder="e.g., 0.28" required>
+            </div>
+
+            <div class="form-group">
+                <label for="CTDTEMP_ITS90">Ocean Temperature (°C)</label>
+                <input type="text" name="CTDTEMP_ITS90" placeholder="e.g., 15.5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Oxygen">Dissolved Oxygen (mg/L)</label>
+                <input type="text" name="Oxygen" placeholder="e.g., 7.8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="recommended_Oxygen">Recommended Oxygen</label>
+                <input type="text" name="recommended_Oxygen" placeholder="e.g., 7.5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="CTDOXY">CTDOXY (mg/L)</label>
+                <input type="text" name="CTDOXY" placeholder="e.g., 6.0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Niskin_ID">Niskin Bottle ID (Optional)</label>
+                <input type="text" name="Niskin_ID" placeholder="e.g., 1023">
+            </div>
+
+            <div class="form-group">
+                <label for="Longitude">Longitude (Optional)</label>
+                <input type="text" name="Longitude" placeholder="e.g., -122.42">
+            </div>
+
+            <div class="form-group">
+                <label for="Accession">Accession Number (Optional)</label>
+                <input type="text" name="Accession" placeholder="e.g., 12345">
+            </div>
+
+            <div class="form-group">
+                <label for="Salinity_PSS78">Salinity (PSS-78)</label>
+                <input type="text" name="Salinity_PSS78" placeholder="e.g., 35" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+        <a href="/" class="btn btn-secondary">Go Back</a>
+    </div>
+
+</body>
+</html>

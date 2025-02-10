@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Ocean Data for Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="upload-bg">
+
+    <div class="container">
+        <h2>Enter Ocean Data for Prediction</h2>
+        
+        <form action="/predict" method="POST">
+            <!-- In-Situ Measured pH -->
+            <div class="form-group">
+                <label for="pH_TS_insitu_measured">In-Situ Measured pH</label>
+                <input type="text" id="pH_TS_insitu_measured" name="pH_TS_insitu_measured" placeholder="e.g., 8.1" required>
+            </div>
+            
+            <!-- Calcite Concentration -->
+            <div class="form-group">
+                <label for="Calcite">Calcite Concentration (mg/L)</label>
+                <input type="text" id="Calcite" name="Calcite" placeholder="e.g., 0.35" required>
+            </div>
+
+            <!-- Calculated Carbonate -->
+            <div class="form-group">
+                <label for="Carbonate_insitu_calculated">Calculated Carbonate (mg/L)</label>
+                <input type="text" id="Carbonate_insitu_calculated" name="Carbonate_insitu_calculated" placeholder="e.g., 0.25" required>
+            </div>
+
+            <!-- Aragonite Saturation -->
+            <div class="form-group">
+                <label for="Aragonite">Aragonite Saturation</label>
+                <input type="text" id="Aragonite" name="Aragonite" placeholder="e.g., 3.5" required>
+            </div>
+
+            <!-- Measured Carbonate -->
+            <div class="form-group">
+                <label for="Carbonate_measured">Measured Carbonate (mg/L)</label>
+                <input type="text" id="Carbonate_measured" name="Carbonate_measured" placeholder="e.g., 0.30" required>
+            </div>
+
+            <!-- In-Situ Measured Carbonate -->
+            <div class="form-group">
+                <label for="Carbonate_insitu_measured">In-Situ Measured Carbonate (mg/L)</label>
+                <input type="text" id="Carbonate_insitu_measured" name="Carbonate_insitu_measured" placeholder="e.g., 0.28" required>
+            </div>
+
+            <!-- Calculated pH -->
+            <div class="form-group">
+                <label for="pH_TS_insitu_calculated">Calculated pH</label>
+                <input type="text" id="pH_TS_insitu_calculated" name="pH_TS_insitu_calculated" placeholder="e.g., 8.05" required>
+            </div>
+
+            <!-- Ocean Temperature -->
+            <div class="form-group">
+                <label for="CTDTEMP_ITS90">Ocean Temperature (°C)</label>
+                <input type="text" id="CTDTEMP_ITS90" name="CTDTEMP_ITS90" placeholder="e.g., 15.5" required>
+            </div>
+
+            <!-- Dissolved Oxygen -->
+            <div class="form-group">
+                <label for="Oxygen">Dissolved Oxygen (mg/L)</label>
+                <input type="text" id="Oxygen" name="Oxygen" placeholder="e.g., 7.8" required>
+            </div>
+
+            <!-- Recommended Oxygen Level -->
+            <div class="form-group">
+                <label for="recommended_Oxygen">Recommended Oxygen Level</label>
+                <input type="text" id="recommended_Oxygen" name="recommended_Oxygen" placeholder="e.g., 7.5" required>
+            </div>
+
+            <!-- CTDOXY -->
+            <div class="form-group">
+                <label for="CTDOXY">CTDOXY (mg/L)</label>
+                <input type="text" id="CTDOXY" name="CTDOXY" placeholder="e.g., 6.0" required>
+            </div>
+
+            <!-- Optional Fields -->
+            <div class="form-group">
+                <label for="Niskin_ID">Niskin Bottle ID (Optional)</label>
+                <input type="text" id="Niskin_ID" name="Niskin_ID" placeholder="e.g., 1023">
+            </div>
+
+            <div class="form-group">
+                <label for="Longitude">Longitude (Optional)</label>
+                <input type="text" id="Longitude" name="Longitude" placeholder="e.g., -122.42">
+            </div>
+
+            <div class="form-group">
+                <label for="Accession">Accession Number (Optional)</label>
+                <input type="text" id="Accession" name="Accession" placeholder="e.g., 12345">
+            </div>
+
+            <!-- Salinity -->
+            <div class="form-group">
+                <label for="Salinity_PSS78">Salinity (PSS-78)</label>
+                <input type="text" id="Salinity_PSS78" name="Salinity_PSS78" placeholder="e.g., 35" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-primary">Predict</button>
+        </form>
+
+        <a href="/" class="btn-secondary">Go Back</a>
+    </div>
+
+</body>
+</html>
